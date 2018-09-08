@@ -9,13 +9,15 @@ $(document).ready(function () {
       $('.amenities h4').html('&nbsp;');
     }
   });
-  setInterval(function(){
-    $.getJSON('http://0.0.0.0:4568/api/v1/status/', function(data) {
+  function checkAPI(){
+    $.getJSON('http://0.0.0.0:5001/api/v1/status/', function(data) {
       if (data.status == 'OK') {
 	$('#api_status').addClass('available');
       } else {
 	$('#api_status').removeClass('available');
       }
     }).fail(function() { $('#api_status').removeClass('available'); });
-  }, 15000);
+  }
+  checkAPI();
+  setInterval(checkAPI, 15000);
 });
