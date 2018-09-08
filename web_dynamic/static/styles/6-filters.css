@@ -58,6 +58,9 @@
 	font-weight: 400;
 	font-size: 14px;
 	margin: 7px 0 3px 40px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
 
 /**
@@ -83,7 +86,9 @@
 	padding: 30px 40px 40px 30px;
 	margin: 15px -1px 0 -1px;
 }
-
+.amenities input{
+    margin-right: 10px;
+}
 .container .filters .popover ul {
 	list-style-type: none;
 	padding-left: 20px;
@@ -92,7 +97,6 @@
 .container .filters .popover li {
 	margin: 5px 0 5px 0;
 }
-
 @media screen and (max-width: 600px) {
 
 	.container .filters {
